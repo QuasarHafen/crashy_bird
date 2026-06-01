@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://g6u4we8oi2nl"]
+
+[ext_resource type="Texture2D" uid="uid://bthgvctnwjvjq" path="res://röhre/pipe.png" id="1_lgm4f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lgm4f"]
+size = Vector2(74, 559)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x1bs5"]
+size = Vector2(74, 560)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8l8y4"]
+size = Vector2(6.75, 179.5)
+
+[node name="röhre" type="Area2D" unique_id=476335800]
+position = Vector2(0, -232)
+
+[node name="Oben" type="StaticBody2D" parent="." unique_id=1598493645]
+position = Vector2(0, -136)
+
+[node name="Sprite2D" type="Sprite2D" parent="Oben" unique_id=882946601]
+rotation = 3.1415927
+texture = ExtResource("1_lgm4f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Oben" unique_id=906954018]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_lgm4f")
+
+[node name="Unten" type="StaticBody2D" parent="." unique_id=469502877]
+position = Vector2(-128, 608)
+
+[node name="Sprite2D" type="Sprite2D" parent="Unten" unique_id=523811311]
+position = Vector2(126, -9)
+texture = ExtResource("1_lgm4f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Unten" unique_id=1375455733]
+position = Vector2(126, -9)
+shape = SubResource("RectangleShape2D_x1bs5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1333752972]
+position = Vector2(32.625, 232)
+shape = SubResource("RectangleShape2D_8l8y4")
