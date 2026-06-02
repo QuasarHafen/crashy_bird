@@ -1,5 +1,6 @@
 body {
-    background-image: url("img/background.png");
+    font-family: jetbrains-mono, monospace;
+    background-image: url("img/background_2.png");
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat;
@@ -7,9 +8,11 @@ body {
 }
 
 h1 {
-    margin-left: 80px;
-    color: red;
+    margin-left: 600px;
+    position: center;
+    color: rgb(157, 9, 9);
 }
+
 section {
     background: transparent;
     margin: 20px 0;
@@ -18,7 +21,9 @@ section {
 }
 
 h2 {
-    color: red;
+    margin-left: 600px;
+    position: center;
+    color: rgb(157, 9, 9);
 }
 
 h3 {
@@ -26,6 +31,7 @@ h3 {
 }
 
 p {
+    margin-top: 50px;
     color: black;
 }
 
@@ -49,7 +55,7 @@ li {
     position: absolute;
     width: 40px;
     height: 4px;
-    background-color: red;
+    background-color: rgb(157, 9, 9);
     margin: 5px;
     border-radius: 5px;
     transition: all 0.3s ease;
@@ -113,4 +119,20 @@ li {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+.logo {
+    position: fixed;
+    top: 5px;
+    right: 40px;
+    width: 130px;
+    height: auto;
+}
+
+.hauptbild {
+    position: fixed;
+    top: 300px;
+    right: 600px;
+    width: 300px;
+    height: auto;
 }
