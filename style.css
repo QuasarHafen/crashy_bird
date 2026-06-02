@@ -122,7 +122,7 @@ li {
 }
 
 .logo {
-    position: fixed;
+    position: absolute;
     top: 5px;
     right: 40px;
     width: 130px;
@@ -130,9 +130,9 @@ li {
 }
 
 .hauptbild {
-    position: fixed;
-    top: 300px;
-    right: 600px;
-    width: 300px;
+    position: absolute;
+    top: 200px;
+    right: 200px;
+    width: 350px;
     height: auto;
 }
