@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Echtzeit Leaderboard - Crashy Bird</title>
+        <link rel="stylesheet" href="style.css">
+
+                <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-analytics.js";
+        import {
+            getFirestore,
+            collection,
+            query,
+            orderBy,
+            limit,
+            onSnapshot
+        } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
+
+        const firebaseConfig = {
+        apiKey: "AIzaSyBL-Yb1Fksl9iNNGorN4Gfxwt5pyUDFs1A",
+        authDomain: "crashy-bird.firebaseapp.com",
+        projectId: "crashy-bird",
+        storageBucket: "crashy-bird.firebasestorage.app",
+        messagingSenderId: "34785742121",
+        appId: "1:34785742121:web:ab304cb7e081d313493b38",
+        measurementId: "G-DZPYKRQDE0"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const analytics = getAnalytics(app);
+
+        const leaderboardBody = document.getElementById("leaderboard-body");
+
+        const q = query(
+            collection(db, "leaderboard"),
+            orderBy("score", "desc"),
+            limit(10)
+        );
+
+        onSnapshot(q, (snapshot) => {
+            leaderboardBody.innerHTML = "";
+
+            let rank = 1;
+
+            snapshot.forEach((doc) => {
+            const data = doc.data();
+
+            leaderboardBody.innerHTML += `
+                <tr>
+                <td>${rank}</td>
+                <td>${data.name}</td>
+                <td>${data.score}</td>
+                </tr>
+            `;
+
+            rank++;
+            });
+        });
+        </script>
+    </head>
+
+    <body>
+        <h1>Echtzeit Leaderboard</h1>
+
+        <p>Hier findest du die aktuelle Bestenliste unseres Spiel Crashy Bird:</p>
+
+        <table>
+            <thead>
+                <tr>
+                <th>Platz</th>
+                <th>Name</th>
+                <th>Score</th>
+                </tr>
+            </thead>
+
+            <tbody id="leaderboard-body">
+            </tbody>
+        </table>
+
+        <div class="menu-btn" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </body>
+
+    <nav id="sidebar">
+        <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="anleitung.html">Anleitung</a></li>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="screenshots.html">Screenshots</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="projektverlauf.html">Projektverlauf</a></li>
+            <li><a href="technologien.html">Technologien</a></li>
+        </ul>
+    </nav>
+
+    <script src="script.js"></script>
+</html>
