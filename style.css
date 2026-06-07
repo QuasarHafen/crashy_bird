@@ -8,6 +8,7 @@ body {
 }
 
 h1 {
+    
     margin-left: 600px;
     color: rgb(157, 9, 9);
 }
@@ -20,7 +21,7 @@ section {
 }
 
 h2 {
-    position: center;
+    margin-left: 600px;
     color: rgb(157, 9, 9);
 }
 
@@ -34,7 +35,7 @@ p {
 }
 
 li {
-    color: white;
+    color: black;
     margin: 5px 0;
 }
 
@@ -69,6 +70,7 @@ li {
     background-color: #1f2937;
     transition: 0.4s ease;
     box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
 }
 
 .menu-btn span:nth-child(1) {
@@ -121,7 +123,7 @@ li {
 
 .logo {
     position: absolute;
-    top: 5px;
+    top: -10px;
     right: 40px;
     width: 130px;
     height: auto;
@@ -137,7 +139,7 @@ li {
 
 .roehre_oben {
     position: absolute;
-    top: 30px;
+    top: -30px;
     right: 715px;
     width: 500px;
     rotate: 180deg;
@@ -147,7 +149,7 @@ li {
 
 .coin {
     position: absolute;
-    top: 250px;
+    top: 170px;
     right: 900px;
     width: 100px;
     height: auto;
@@ -156,10 +158,66 @@ li {
 
 .roehre_unten {
     position: absolute;
-    top: 300px;
-    right: 700px;
+    top: 257px;
+    right: 720px;
     width: 500px;
     height: auto;
+    opacity: 0.5;
+}
+
+.roehre_oben2 {
+    position: absolute;
+    top: -80px;
+    right: 1015px;
+    width: 500px;
+    rotate: 180deg;
+    height: auto;
+    opacity: 0.5;
+}
+
+.coin2 {
+    position: absolute;
+    top: 285px;
+    right: 1210px;
+    width: 100px;
+    height: auto;
+    opacity: 0.5;
+}
+
+.roehre_unten2 {
+    position: absolute;
+    top: 307px;
+    right: 1010px;
+    width: 500px;
+    height: auto;
+    opacity: 0.5;
+}
+
+.roehre_oben3 {
+    position: absolute;
+    top: -110px;
+    right: 425px;
+    width: 500px;
+    rotate: 180deg;
+    height: 350px;
+    opacity: 0.5;
+}
+
+.coin3 {
+    position: absolute;
+    top: 245px;
+    right: 620px;
+    width: 100px;
+    height: auto;
+    opacity: 0.5;
+}
+
+.roehre_unten3 {
+    position: absolute;
+    top: 225px;
+    right: 420px;
+    width: 500px;
+    height: 550px;
     opacity: 0.5;
 }
 
