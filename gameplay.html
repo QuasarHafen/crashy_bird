@@ -1,45 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <title>Crashy Bird - Screenshots</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Screenshots</h1>
+  <head>
+    <title>Crashy Bird - Screenshots</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+  
+    <div class="video-gallery">
+      <h1>Gameplay Videos</h1>
+      <iframe
+        width="560"
+        height="315"
+        src="vid/crashy_bird_gameplay_fadi.mp4"
+        title="Gameplay Video von Fadi"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+      <iframe
+        width="560"
+        height="315"
+        src="vid/crashy_bird_gameplay_giovanna.mp4"
+        title="Gameplay Video von Giovanna"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
 
-        <p>Hier sind einige Screenshots aus unserem Crashy Bird Spiel:</p>
+    <div class="menu-btn" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </body>
 
-        <div class="screenshot-gallery">
-            <img src="screenshots/screenshot1.png" alt="Gameplay 1">
-            <img src="screenshots/screenshot2.png" alt="Gameplay 2">
-            <img src="screenshots/screenshot3.png" alt="Gameplay 3">
+  <nav id="sidebar">
+    <ul>
+      <li><a href="index.html">Startseite</a></li>
+      <li><a href="anleitung.html">Anleitung</a></li>
+      <li><a href="download.html">Download</a></li>
+      <li><a href="leaderboard.html">Leaderboard</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="projektverlauf.html">Projektverlauf</a></li>
+      <li><a href="technologien.html">Technologien</a></li>
+    </ul>
+  </nav>
 
-        </div>
+  <script src="script.js"></script>
 
-        <div class="menu-btn" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-    </body>
-
-    <nav id="sidebar">
-        <ul>
-            <li><a href="index.html">Startseite</a></li>
-            <li><a href="anleitung.html">Anleitung</a></li>
-            <li><a href="download.html">Download</a></li>
-            <li><a href="leaderboard.html">Leaderboard</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="projektverlauf.html">Projektverlauf</a></li>
-            <li><a href="technologien.html">Technologien</a></li>
-        </ul>
-    </nav>
-
-    <script src="script.js"></script>
-
-    <img src="img/logo.png" alt="Team Logo" class="logo">
-    <img src="img/Hauptbild.jpg" alt="Hauptbild" class="hauptbild">
+  <img src="img/logo.png" alt="Team Logo" class="logo" />
+    <!--
+    <img src="img/Hauptbild.jpg" alt="Hauptbild" class="hauptbild" />
     <img src="img/große_roehre.png" alt="Röhre" class="roehre_oben">
     <img src="img/xxl_roehre.png" alt="Röhre" class="roehre_unten">
     <img src="img/coin-Photoroom.png" alt="Coin" class="coin">
@@ -48,5 +59,6 @@
     <img src="img/coin-Photoroom.png" alt="Coin" class="coin2">
     <img src="img/große_roehre2.png" alt="Röhre" class="roehre_oben3">
     <img src="img/extra_große_roehre.png" alt="Röhre" class="roehre_unten3">
-    <img src="img/coin-Photoroom.png" alt="Coin" class="coin3">
+    <img src="img/coin-Photoroom.png" alt="Coin" class="coin3"> 
+    -->
 </html>
